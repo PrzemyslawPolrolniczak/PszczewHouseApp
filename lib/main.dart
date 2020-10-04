@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './consts.dart';
 import './widgets/tile.dart';
 
 void main() {
@@ -60,7 +61,12 @@ class _MyHomePageState extends State<MyHomePage> {
               margin: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [Tile(), Tile(), Tile()],
+                children: [
+                  Tile(status: Status.open),
+                  Tile(status: Status.ongoing),
+                  Tile(status: Status.private),
+                  Tile(status: Status.past)
+                ],
               ),
             ),
             Text('Test2'),
